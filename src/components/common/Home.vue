@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-    	<v-top></v-top>
-    	<v-left></v-left>
+    	<v-top @getLogin="setLogin"></v-top>
+    	<v-left :flag='islogin'></v-left>
     	<div class="content">
     		<router-view></router-view>
     	</div>
@@ -11,6 +11,16 @@
     import vTop from './top.vue'
     import vLeft from './left.vue'
     export default {
+        data(){
+            return{
+                islogin: localStorage.getItem("username")
+            }
+        },
+        methods: {
+            setLogin: function(){
+                this.islogin = localStorage.getItem("username")
+            }
+        },
     	components: {
     		vTop,vLeft
     	}

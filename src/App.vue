@@ -14,6 +14,8 @@ export default {
 	html,body{
 		padding: 0px;
 		margin: 0px;
+	}
+	*{
 		font-family: "微软雅黑";
 	}
 </style>
