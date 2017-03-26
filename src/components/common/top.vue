@@ -22,12 +22,25 @@
             </el-dialog>
             <div class="quit" v-show="isLogin">
                 <span class="hello">你好! {{ isLogin }}</span>
-                <el-button  class="login1" type="warning" @click="quitOut()" >退出</el-button>
+                <el-popover
+                    ref="popover5"
+                    placement="bottom"
+                    width="160"
+                    v-model="visible2">
+                    <p>确定退出？</p>
+                    <div style="text-align: right; margin: 0">
+                        <el-button size="mini" type="text" @click="visible2 = false">取消</el-button>
+                        <el-button type="primary" size="mini" @click="quitOut()">确定</el-button>
+                    </div>
+                </el-popover>
+                <el-button  class="login1" type="warning" v-popover:popover5 >退出</el-button>
+                
             </div>
     	</div>
     </div>
 </template>
 <script>
+
     export default {
         data() {
             var pwdCheck = (rule, value, callback) => {
@@ -54,6 +67,7 @@
 
             return {
                 dialogTableVisible: false,
+                visible2: false,
                 user: {
                     name: '',
                     passward: '',
@@ -92,6 +106,10 @@
                 localStorage.removeItem("username");
                 this.isLogin = '';
                 this.$emit('getLogin');
+                this.visible2 = false;
+                if(this.$route.path == '/page3'){
+                    this.$router.push('/page1');
+                }
             }
         }
     }
