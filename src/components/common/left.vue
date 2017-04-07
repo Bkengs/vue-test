@@ -9,6 +9,9 @@
         <span v-show="flag">
             <router-link to="/page3">表格</router-link>
         </span>
+        <span v-show="flag">
+            <router-link to="/page4">二级</router-link>
+        </span>
     </div>
 </template>
 <script>

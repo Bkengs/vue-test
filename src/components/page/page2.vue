@@ -131,7 +131,13 @@
                     }
                 ]
             }
-        })
+        }),
+        beforeCreate: function(){
+            this.$emit('loadstart');
+        },
+        mounted: function(){
+            this.$emit('loadend');
+        }
     }
 </script>
 

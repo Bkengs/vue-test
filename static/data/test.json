@@ -1,0 +1,54 @@
+{
+    "succ": true,
+    "data":{
+        "year": 2015,
+        "month": 9,
+        "items": [
+            {
+                "totalelec": 3.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 5.3,
+                "totalmonty":7.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 8.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 3.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 5.3,
+                "totalmonty":7.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 8.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 3.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 5.3,
+                "totalmonty":7.5,
+                "time": "10月20日"
+            },
+            {
+                "totalelec": 8.3,
+                "totalmonty": 4.5,
+                "time": "10月20日"
+            }
+        ]
+    }
+}
